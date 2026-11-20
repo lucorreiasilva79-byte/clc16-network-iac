@@ -12,6 +12,9 @@ jobs:
     name: Terraform Apply
     runs-on: ubuntu-latest
 
+    ## Usa os secrets cadastrados no ambiente "production" ##
+    environment: production
+
     ## Credenciais da AWS vindas dos Secrets do repositorio ##
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
