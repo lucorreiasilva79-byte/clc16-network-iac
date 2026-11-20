@@ -1,0 +1,45 @@
+name: Terraform Apply
+
+## Roda quando houver push na branch main ou manualmente pela aba Actions ##
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  terraform:
+    name: Terraform Apply
+    runs-on: ubuntu-latest
+
+    ## Credenciais da AWS vindas dos Secrets do repositorio ##
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
+      AWS_DEFAULT_REGION: us-east-1
+
+    steps:
+      ## Baixa o codigo do repositorio ##
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      ## Instala o Terraform ##
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      ## Conecta no backend S3 e baixa o provider ##
+      - name: Terraform Init
+        run: terraform init
+
+      ## Confere a sintaxe dos arquivos ##
+      - name: Terraform Validate
+        run: terraform validate
+
+      ## Mostra o que vai ser criado ou alterado ##
+      - name: Terraform Plan
+        run: terraform plan -input=false
+
+      ## Aplica as mudancas na AWS ##
+      - name: Terraform Apply
+        run: terraform apply -auto-approve -input=false
