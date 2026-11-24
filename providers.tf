@@ -13,7 +13,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Environment = "dev"
+      Environment = "${var.env}"
       Project     = "clc16-network-iac"
       Turma       = "clc16"
     }
