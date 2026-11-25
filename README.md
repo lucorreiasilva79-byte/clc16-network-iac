@@ -1,5 +1,5 @@
 # clc16-network-iac
-Aula de terraform
+Aula de terraform - rede na AWS com pipeline e checkov
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
