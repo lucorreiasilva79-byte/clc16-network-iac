@@ -87,17 +87,17 @@ output "rt_priv_association_subnet_1c" {
 }
 
 
-## ID do security group da EC2 ##
-output "sg_web" {
-  value = aws_security_group.sg_web.id
-}
+# ## ID do security group da EC2 ##
+# output "sg_web" {
+#   value = aws_security_group.sg_web.id
+# }
 
-## ID da EC2 com Apache ##
-output "ec2_web" {
-  value = aws_instance.ec2_web.id
-}
+# ## ID da EC2 com Apache ##
+# output "ec2_web" {
+#   value = aws_instance.ec2_web.id
+# }
 
-## IP publico da EC2 (abrir no navegador) ##
-output "ec2_public_ip" {
-  value = aws_instance.ec2_web.public_ip
-}
+# ## IP publico da EC2 (abrir no navegador) ##
+# output "ec2_public_ip" {
+#   value = aws_instance.ec2_web.public_ip
+# }
