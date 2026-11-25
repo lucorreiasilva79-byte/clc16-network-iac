@@ -22,26 +22,25 @@ No modules.
 
 | Name | Type |
 | ---- | ---- |
+| [aws_default_security_group.default](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/default_security_group) | resource |
 | [aws_eip.eip_nat_gw_1a](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/eip) | resource |
 | [aws_eip.eip_nat_gw_1c](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/eip) | resource |
-| [aws_instance.ec2_web](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/instance) | resource |
+| [aws_flow_log.example](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/flow_log) | resource |
 | [aws_internet_gateway.gw_clc_vpc](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/internet_gateway) | resource |
 | [aws_nat_gateway.nat_gw_1a](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/nat_gateway) | resource |
 | [aws_nat_gateway.nat_gw_1c](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/nat_gateway) | resource |
-| [aws_route_table.private_rt_1A](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/route_table) | resource |
+| [aws_route_table.private_rt_1a](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/route_table) | resource |
 | [aws_route_table.private_rt_1c](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/route_table) | resource |
 | [aws_route_table.public_rt](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/route_table) | resource |
 | [aws_route_table_association.rt_priv_association_subnet_1a](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/route_table_association) | resource |
 | [aws_route_table_association.rt_priv_association_subnet_1c](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/route_table_association) | resource |
 | [aws_route_table_association.rt_pub_association_subnet_1a](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/route_table_association) | resource |
 | [aws_route_table_association.rt_pub_association_subnet_1c](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/route_table_association) | resource |
-| [aws_security_group.sg_web](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/security_group) | resource |
 | [aws_subnet.private_subnet_1a](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/subnet) | resource |
 | [aws_subnet.private_subnet_1c](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/subnet) | resource |
 | [aws_subnet.public_subnet_1a](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/subnet) | resource |
 | [aws_subnet.public_subnet_1c](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/subnet) | resource |
 | [aws_vpc.clc_vpc](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/resources/vpc) | resource |
-| [aws_ami.amazon_linux](https://registry.terraform.io/providers/hashicorp/aws/6.72.0/docs/data-sources/ami) | data source |
 
 ## Inputs
 
@@ -59,14 +58,12 @@ No modules.
 | Name | Description |
 | ---- | ----------- |
 | <a name="output_clc_vpc"></a> [clc\_vpc](#output\_clc\_vpc) | # ID da VPC ## |
-| <a name="output_ec2_public_ip"></a> [ec2\_public\_ip](#output\_ec2\_public\_ip) | # IP publico da EC2 (abrir no navegador) ## |
-| <a name="output_ec2_web"></a> [ec2\_web](#output\_ec2\_web) | # ID da EC2 com Apache ## |
 | <a name="output_eip_nat_gw_1a"></a> [eip\_nat\_gw\_1a](#output\_eip\_nat\_gw\_1a) | # ID do IP publico do nat gateway 1a ## |
 | <a name="output_eip_nat_gw_1c"></a> [eip\_nat\_gw\_1c](#output\_eip\_nat\_gw\_1c) | # ID do IP publico do nat gateway 1c ## |
 | <a name="output_gw_clc_vpc"></a> [gw\_clc\_vpc](#output\_gw\_clc\_vpc) | # ID do Internet Gateway ## |
 | <a name="output_nat_gw_1a"></a> [nat\_gw\_1a](#output\_nat\_gw\_1a) | # ID do nat gateway 1a ## |
 | <a name="output_nat_gw_1c"></a> [nat\_gw\_1c](#output\_nat\_gw\_1c) | # ID do nat gateway 1c ## |
-| <a name="output_private_rt_1A"></a> [private\_rt\_1A](#output\_private\_rt\_1A) | # ID da tabela de rota privada 1a ## |
+| <a name="output_private_rt_1a"></a> [private\_rt\_1a](#output\_private\_rt\_1a) | # ID da tabela de rota privada 1a ## |
 | <a name="output_private_rt_1c"></a> [private\_rt\_1c](#output\_private\_rt\_1c) | # ID da tabela de rota privada 1c ## |
 | <a name="output_private_subnet_1a"></a> [private\_subnet\_1a](#output\_private\_subnet\_1a) | # ID da subnet privada 1a ## |
 | <a name="output_private_subnet_1c"></a> [private\_subnet\_1c](#output\_private\_subnet\_1c) | # ID da subnet privada 1c ## |
@@ -77,5 +74,4 @@ No modules.
 | <a name="output_rt_priv_association_subnet_1c"></a> [rt\_priv\_association\_subnet\_1c](#output\_rt\_priv\_association\_subnet\_1c) | # ID da associacao da subnet privada 1c com a tabela de rota privada 1c ## |
 | <a name="output_rt_pub_association_subnet_1a"></a> [rt\_pub\_association\_subnet\_1a](#output\_rt\_pub\_association\_subnet\_1a) | # ID da associacao da subnet publica 1a com a tabela de rota publica ## |
 | <a name="output_rt_pub_association_subnet_1c"></a> [rt\_pub\_association\_subnet\_1c](#output\_rt\_pub\_association\_subnet\_1c) | # ID da associacao da subnet publica 1c com a tabela de rota publica ## |
-| <a name="output_sg_web"></a> [sg\_web](#output\_sg\_web) | # ID do security group da EC2 ## |
 <!-- END_TF_DOCS -->
