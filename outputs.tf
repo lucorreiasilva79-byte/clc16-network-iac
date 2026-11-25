@@ -67,8 +67,8 @@ output "rt_pub_association_subnet_1c" {
 }
 
 ## ID da tabela de rota privada 1a ##
-output "private_rt_1A" {
-  value = aws_route_table.private_rt_1A.id
+output "private_rt_1a" {
+  value = aws_route_table.private_rt_1a.id
 }
 
 ## ID da associacao da subnet privada 1a com a tabela de rota privada 1a ##
